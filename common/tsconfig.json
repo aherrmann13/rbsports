@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.base.json",
+
+  // ts-jest wont handle anything after es6
+  "compilerOptions": {
+    "module": "es2020",
+    "target": "es2020",
+    "lib": ["es2020"],
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "outDir": "dist"
+  }
+}
