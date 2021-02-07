@@ -8,6 +8,7 @@
     "lib": ["es2020"],
     "baseUrl": "src",
     "esModuleInterop": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "moduleResolution": "node"
   }
 }

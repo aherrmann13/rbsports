@@ -69,3 +69,8 @@ project. Each framework (express, angular) will likely have its own plugins and 
 likely to diverge anyways. If there are any common settings that we want to be able to change in one place, I think the
 best way of going about this would be a sibling package with its own dev dependencies that is either referenced as a
 plugin or extended from each other package.
+
+## fp-ts
+
+[fp-ts resource](https://rlee.dev/writing/practical-guide-to-fp-ts-part-1)  
+[fp-ts validation resource](https://dev.to/gcanti/getting-started-with-fp-ts-either-vs-validation-5eja)
