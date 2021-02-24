@@ -74,6 +74,11 @@ export type Bracket = {
   readonly totalPointsScored: number;
 };
 
+export type BracketEntry = {
+  name: string;
+  bracket: Bracket;
+};
+
 const favorites: Favorite[] = [1, 2, 3, 17, 18, 19, 33, 34, 35, 49, 50, 51];
 export function isFavorite(team: Team): team is Favorite {
   return favorites.findIndex((x) => x === team) > -1;
