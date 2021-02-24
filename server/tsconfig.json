@@ -1,5 +1,4 @@
 {
-  "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "module": "es2020",
     "target": "es2020",
@@ -7,6 +6,7 @@
     "baseUrl": "src",
     "esModuleInterop": true,
     "outDir": "dist",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
   }
 }

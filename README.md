@@ -14,8 +14,8 @@ flexibility of each component (client, server, shared model, etc... ) having its
 larger libraries like angular or express are used. Additionally, that project is using angular js, not angular (2+)
 
 avoiding using something like [lerna](https://lerna.js.org/) to share common package with types and validation as
-linking a package is
-[pretty straightforward](https://stackoverflow.com/questions/15806241/how-to-specify-local-modules-as-npm-package-dependencies)
+installing a local package is
+[pretty straightforward](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#local-paths)
 
 ## software versions
 
@@ -33,6 +33,13 @@ this).
 
 Source for node 14 support
 [here](https://stackoverflow.com/questions/61305578/what-typescript-configuration-produces-output-closest-to-node-js-14-capabilities/61305579#61305579)
+
+to avoid having to make all imports relative, using `--experimental-specifier-resolution=node` from github repo
+[here](https://github.com/dandv/typescript-modern-project#import-your-own-modules-without-specifying-an-extension)
+
+, targeting commonjs rather than es2020. also seems to struggle with `import * as O from 'fp-ts/Option'`, im not
+actually sure what is going on there. something like `import { pipe } from 'fp-ts/lib/function.js';` works fine, the
+`Option` folder just has a package.json file with some references. Not sure what is going on there.
 
 ## formatting/linting
 

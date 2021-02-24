@@ -15,3 +15,6 @@ be removed if we add a webpack target to run server or something along these lin
 the package.json runs the server as the project currently stands
 
 `.eslintrc.cjs` instead of `.eslintrc.js` becuase `"type": "module"` in package.json
+
+dont love the way express is set up where a 'controller' expects certain parameters on the request, but they need to be
+specified in the route as well, which could potentially be in a different file
