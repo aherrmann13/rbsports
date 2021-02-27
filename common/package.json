@@ -1,10 +1,16 @@
 {
-  "name": "common",
+  "name": "@rbsports/common",
   "version": "1.0.0",
   "scripts": {
+    "build": "npm run lint && tsc -p ./tsconfig.build.json",
     "lint": "eslint .",
     "test": "jest --coverage"
   },
+  "type": "module",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "sideEffects": false,
   "peerDependencies": {
     "fp-ts": "^2.9.5"
   },

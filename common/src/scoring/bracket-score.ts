@@ -1,11 +1,11 @@
-import { Bracket } from 'types/bracket';
-import { BracketScore, Game, Rounds, Wins } from 'types/results';
-import { fastbreakTrioScore } from 'scoring/fastbreak-trio-score';
-import { finalFourScore } from 'scoring/final-four-score';
-import { regionalScore } from 'scoring/regional-score';
-import { sweetSixteenScore } from 'scoring/sweet-sixteen-score';
-import { tournamentChoiceScore } from 'scoring/tournament-choice-score';
-import { graveyardScore } from 'scoring/graveyard-score';
+import { Bracket } from '../types/bracket';
+import { BracketScore, Game, Rounds, Wins } from '../types/results';
+import { fastbreakTrioScore } from './fastbreak-trio-score';
+import { finalFourScore } from './final-four-score';
+import { regionalScore } from './regional-score';
+import { sweetSixteenScore } from './sweet-sixteen-score';
+import { tournamentChoiceScore } from './tournament-choice-score';
+import { graveyardScore } from './graveyard-score';
 
 function calculateOffset(guess: Bracket['totalPointsScored'], currentResults: Wins): number | undefined {
   // sort in case for some reason there are two 'finals' due

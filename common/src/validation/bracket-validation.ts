@@ -1,8 +1,8 @@
-import { Bracket, Cinderella, Favorite, Sleeper } from 'types/bracket';
-import { pipe, flow } from 'fp-ts/function';
-import { getSemigroup, NonEmptyArray } from 'fp-ts/NonEmptyArray';
-import { sequenceT } from 'fp-ts/Apply';
-import * as E from 'fp-ts/Either';
+import { Bracket, Cinderella, Favorite, Sleeper } from '../types/bracket';
+import { pipe, flow } from 'fp-ts/es6/function';
+import { getSemigroup, NonEmptyArray } from 'fp-ts/es6/NonEmptyArray';
+import { sequenceT } from 'fp-ts/es6/Apply';
+import * as E from 'fp-ts/es6/Either';
 
 /**
  * TODO: new place for these
@@ -97,7 +97,7 @@ const checkBonusCinderellaNotSelectedAlready: (b: Bracket) => E.Either<NonEmptyA
   E.mapLeft((x) => [x])
 );
 
-export function validate(bracket: Bracket): E.Either<NonEmptyArray<BracketError>, Bracket> {
+export function validateBracket(bracket: Bracket): E.Either<NonEmptyArray<BracketError>, Bracket> {
   return pipe(
     sequenceT(applicativeValidation)(
       checkBonusFavoriteNotSelectedAlready(bracket),
