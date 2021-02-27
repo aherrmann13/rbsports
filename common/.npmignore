@@ -1,0 +1,8 @@
+*.ts
+jest.config.cjs
+coverage
+.eslintrc.cjs
+tsconfig*.json
+
+# include the .d.ts files
+!*.d.ts
