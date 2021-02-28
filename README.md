@@ -27,6 +27,8 @@ TODO: will add more here as project moves along
 
 ## es versions and node
 
+#### es support in node
+
 express application will be running on node 14. Node 14 fully supports es2020 so this can be used. We may need to use
 babel or drop the es version of the shared lib (or not publish the transpiled files? not sure the best way to go about
 this).
@@ -37,11 +39,23 @@ Source for node 14 support
 to avoid having to make all imports end in `.js`, using `--experimental-specifier-resolution=node` from github repo
 [here](https://github.com/dandv/typescript-modern-project#import-your-own-modules-without-specifying-an-extension)
 
-when referencing `fp-io` or `ts-io` using the es6 path. The way the library is set up, `package.json` `main` property
-points to the commonjs module, and the `module` property points to the es6 version. `module` is supported by things like
-webpack/rollup but does not have first class typescript support. es6 should support commonjs references, so im not sure
-why referencing `import * as E from 'fp-ts/Either'` doesn't work, but it errors in `ts-jest` and node cant find the
-files when run from output directory.
+#### es modules vs common js
+
+this is based on a conversation on node gitter [here](https://gitter.im/nodejs/node?at=603bd8dcd74bbe49e0c4eca5) with
+@ljharb
+
+`fp-io` and `ts-io` es6 folder does not contain es6 modules. they contain modules that have import/export in them but do
+not have `"type": "module"` or file extension `.mjs` so they are seen as commonjs modules by node. The es6 folder is to
+be used by tooling like webpack.
+
+open questions:
+
+- does this mean the the common package should reference the package.json files with no lib path?
+  - based on my understanding of how `"main"` property works in package.json, referencing anything with no lib should
+    default to commonjs lib path
+- how does webpack know to switch to es6 version? is it some string replacement logic? I would guess the package.json
+  reference would be how that works, but the no lib references seem to break
+  - does rollup handle stuff like this?
 
 ## formatting/linting
 

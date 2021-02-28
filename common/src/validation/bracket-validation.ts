@@ -1,8 +1,8 @@
 import { Bracket, Cinderella, Favorite, Sleeper } from '../types/bracket';
-import { pipe, flow } from 'fp-ts/es6/function';
-import { getSemigroup, NonEmptyArray } from 'fp-ts/es6/NonEmptyArray';
-import { sequenceT } from 'fp-ts/es6/Apply';
-import * as E from 'fp-ts/es6/Either';
+import { pipe, flow } from 'fp-ts/lib/function';
+import { getSemigroup, NonEmptyArray } from 'fp-ts/lib/NonEmptyArray';
+import { sequenceT } from 'fp-ts/lib/Apply';
+import * as E from 'fp-ts/lib/Either';
 
 /**
  * TODO: new place for these
