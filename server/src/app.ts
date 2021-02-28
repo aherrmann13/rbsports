@@ -2,6 +2,7 @@ import { bracket } from './controllers/bracket';
 import express from 'express';
 
 const app: express.Application = express();
+app.use(express.json());
 
 app.route('/bracket/:id').get(bracket.get).put(bracket.put).post(bracket.post).delete(bracket.del);
 app.route('/bracket').get(bracket.getMany);

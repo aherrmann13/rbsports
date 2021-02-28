@@ -39,7 +39,6 @@ describe('BracketQuery decoder', () => {
   it('should return right with bracket query for boolean userBrackets', () => {
     const decoded = BracketQuery.decode({ userBrackets: undefined });
 
-    console.log(decoded);
     if (E.isRight(decoded)) {
       expect(decoded.right).toEqual({ userBrackets: undefined });
     } else {

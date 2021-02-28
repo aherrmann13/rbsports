@@ -1,10 +1,9 @@
-import { Bracket, BracketEntry } from 'common/src/types/bracket';
+import { Bracket, BracketEntry, SavedItem } from '@rbsports/common';
 import { bracket as bracketController } from 'controllers/bracket';
 import { Request, Response } from 'express';
 import { createBracket, deleteBracket, getBracket, getBrackets, updateBracket } from 'services/bracket';
 import * as E from 'fp-ts/lib/Either';
 import * as O from 'fp-ts/lib/Option';
-import { SavedItem } from 'common/src/types/item';
 
 jest.mock('services/bracket');
 
@@ -351,11 +350,7 @@ describe('bracket', () => {
       expect(mockStatus).toHaveBeenCalledWith(400);
       expect(mockSend).toHaveBeenCalledTimes(1);
       expect(mockSend).toHaveBeenCalledWith(
-        'optional property "userBrackets"\n' +
-          '├─ member 0\n' +
-          '│  └─ cannot decode "1234", should be null\n' +
-          '└─ member 1\n' +
-          '   └─ cannot decode "1234", should be boolean'
+        'optional property "userBrackets"\n' + '└─ cannot decode "1234", should be boolean'
       );
     });
     it('should return 200 with brackets from getManyBrackets', () => {

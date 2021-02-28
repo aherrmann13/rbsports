@@ -1,16 +1,17 @@
 {
-  "name": "server",
+  "name": "@rbsports/server",
   "version": "1.0.0",
   "scripts": {
-    "start": "tsc && node --experimental-specifier-resolution=node .",
-    "tsc": "tsc",
+    "start": "tsc -p ./tsconfig.build.json && node  --experimental-specifier-resolution=node .",
+    "tsc": "tsc -p ./tsconfig.build.json",
     "lint": "eslint .",
     "test": "jest --coverage"
   },
   "type": "module",
   "main": "dist/app.js",
+  "module": "dist/app.js",
   "dependencies": {
-    "common": "file:../common",
+    "@rbsports/common": "file:.local/rbsports-common-1.0.0.tgz",
     "express": "^4.17.1",
     "fp-ts": "^2.9.5",
     "io-ts": "^2.2.14"
