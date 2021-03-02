@@ -5,7 +5,7 @@ import {
   DuplicateSleeperError,
   DuplicateCinderellaError,
 } from 'validation/bracket-validation';
-import * as E from 'fp-ts/lib/Either';
+import * as E from 'fp-ts/Either';
 
 describe('validate', () => {
   const bracket: Bracket = {

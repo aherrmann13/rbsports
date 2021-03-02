@@ -2,14 +2,15 @@
   "name": "@rbsports/common",
   "version": "1.0.0",
   "scripts": {
-    "build": "npm run lint && tsc -p ./tsconfig.build.json",
+    "build": "npm run lint && npm run build-cjs && npm run build-es",
+    "build-cjs": "tsc -p ./tsconfig.build.json",
+    "build-es": "tsc -p ./tsconfig.build-es.json",
     "prepublish": "npm run build",
     "lint": "eslint .",
     "test": "jest --coverage"
   },
-  "type": "module",
   "main": "lib/index.js",
-  "module": "lib/index.js",
+  "module": "es/index.js",
   "typings": "lib/index.d.ts",
   "sideEffects": false,
   "peerDependencies": {

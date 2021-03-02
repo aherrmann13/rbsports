@@ -42,20 +42,19 @@ to avoid having to make all imports end in `.js`, using `--experimental-specifie
 #### es modules vs common js
 
 this is based on a conversation on node gitter [here](https://gitter.im/nodejs/node?at=603bd8dcd74bbe49e0c4eca5) with
-@ljharb
+@ljharb and an issue opened in fp-ts [here](https://github.com/gcanti/fp-ts/issues/1417)
 
 `fp-io` and `ts-io` es6 folder does not contain es6 modules. they contain modules that have import/export in them but do
 not have `"type": "module"` or file extension `.mjs` so they are seen as commonjs modules by node. The es6 folder is to
 be used by tooling like webpack.
 
-open questions:
+all references to anything in these modules should not include `lib` or `es6`. Commonjs `require` will figure out the
+correct path to reference with the `main` property. Bundlers like webpack and rollup will transform imports to reference
+the file that `module` is pointing to.
 
-- does this mean the the common package should reference the package.json files with no lib path?
-  - based on my understanding of how `"main"` property works in package.json, referencing anything with no lib should
-    default to commonjs lib path
-- how does webpack know to switch to es6 version? is it some string replacement logic? I would guess the package.json
-  reference would be how that works, but the no lib references seem to break
-  - does rollup handle stuff like this?
+I was attempting to use esm as the module system in node, and this did not work when using non-lib references. Seems
+`import { x } from 'package'` will not follow `main` propery in package.json, supported by comment
+[here](https://gitter.im/nodejs/node?at=603c6612e8267a46f2e39b92)
 
 ## formatting/linting
 

@@ -6,6 +6,6 @@ module.exports = {
     'src/(.*)': '<rootDir>/src/$1',
   },
   transform: {
-    '^.+\\.(ts|js)$': 'ts-jest',
+    '^.+\\.(ts)$': 'ts-jest',
   },
 };
