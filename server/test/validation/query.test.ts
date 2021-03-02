@@ -1,6 +1,6 @@
 import { BracketQuery } from 'validation/query';
-import * as E from 'fp-ts/lib/Either';
-import { draw } from 'io-ts/lib/Decoder';
+import * as E from 'fp-ts/Either';
+import { draw } from 'io-ts/Decoder';
 
 describe('BracketQuery decoder', () => {
   it('should return left with error for object userBrackets', () => {

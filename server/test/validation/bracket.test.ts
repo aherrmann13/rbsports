@@ -1,6 +1,6 @@
 import { Bracket as BracketValidation, BracketEntry } from 'validation/bracket';
-import * as E from 'fp-ts/lib/Either';
-import { draw } from 'io-ts/lib/Decoder';
+import * as E from 'fp-ts/Either';
+import { draw } from 'io-ts/Decoder';
 
 /**
  * 'test obj type' becuase any large amount of tests was going to be mostly copy paste testing the same thing, I think

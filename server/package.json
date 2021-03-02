@@ -2,14 +2,12 @@
   "name": "@rbsports/server",
   "version": "1.0.0",
   "scripts": {
-    "start": "tsc -p ./tsconfig.build.json && node  --experimental-specifier-resolution=node .",
-    "tsc": "tsc -p ./tsconfig.build.json",
+    "start": "npm run build && node .",
+    "build": "tsc -p ./tsconfig.build.json",
     "lint": "eslint .",
     "test": "jest --coverage"
   },
-  "type": "module",
   "main": "dist/app.js",
-  "module": "dist/app.js",
   "dependencies": {
     "@rbsports/common": "file:.local/rbsports-common-1.0.0.tgz",
     "express": "^4.17.1",

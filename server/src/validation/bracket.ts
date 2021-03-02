@@ -1,4 +1,4 @@
-import * as D from 'io-ts/lib/Decoder';
+import * as D from 'io-ts/Decoder';
 
 /**
  * this is almost a straight copy of the bracket type def

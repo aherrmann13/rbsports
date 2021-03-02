@@ -1,6 +1,6 @@
 import { Item } from 'validation/item';
-import * as E from 'fp-ts/lib/Either';
-import { draw } from 'io-ts/lib/Decoder';
+import * as E from 'fp-ts/Either';
+import { draw } from 'io-ts/Decoder';
 
 describe('Item decoder', () => {
   it('should return left with error for object id', () => {

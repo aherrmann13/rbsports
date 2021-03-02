@@ -1,8 +1,8 @@
 /* istanbul ignore file */
 
 import { BracketQuery, SavedItem, BracketEntry } from '@rbsports/common';
-import * as O from 'fp-ts/lib/Option';
-import * as E from 'fp-ts/lib/Either';
+import * as O from 'fp-ts/Option';
+import * as E from 'fp-ts/Either';
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 

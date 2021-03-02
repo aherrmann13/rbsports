@@ -1,13 +1,13 @@
 import { Request, Response } from 'express';
-import { flow, pipe } from 'fp-ts/lib/function';
+import { flow, pipe } from 'fp-ts/function';
 import { createBracket, deleteBracket, getBracket, updateBracket, getBrackets } from '../services/bracket';
 import { Item } from '../validation/item';
 import { BracketEntry } from '../validation/bracket';
 import { BracketQuery } from '../validation/query';
-import * as E from 'fp-ts/lib/Either';
-import * as O from 'fp-ts/lib/Option';
-import { sequenceT } from 'fp-ts/lib/Apply';
-import { draw } from 'io-ts/lib/Decoder';
+import * as E from 'fp-ts/Either';
+import * as O from 'fp-ts/Option';
+import { sequenceT } from 'fp-ts/Apply';
+import { draw } from 'io-ts/Decoder';
 
 const decodeBracketEntry = flow(
   BracketEntry.decode,
