@@ -17,11 +17,19 @@ avoiding using something like [lerna](https://lerna.js.org/) to share common pac
 installing a local package is
 [pretty straightforward](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#local-paths)
 
+## architecture
+
+application will be launched for v1 in azure app service, and use blob storage instead of a db. website will be hosted
+in azure, tbd if it is azure app service or blob storeage behind cdn (need to look into pricing).
+
+hosting app service requires a docker image, so the server will be built in a docker container.
+
 ## software versions
 
-| software | version | link                                    |
-| -------- | ------- | --------------------------------------- |
-| node     | 14.15.4 | [link](https://nodejs.org/en/download/) |
+| software | version | link                                       |
+| -------- | ------- | ------------------------------------------ |
+| node     | 14.15.4 | [link](https://nodejs.org/en/download/)    |
+| docker   | 20.10.3 | [link](https://www.docker.com/get-started) |
 
 TODO: will add more here as project moves along
 

@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "scripts": {
     "start": "npm run build && node .",
+    "docker:build": "npm run build && docker build -t rbsports/server .",
+    "docker:run": "docker run -p 3000:3000 -d rbsports/server",
     "build": "tsc -p ./tsconfig.build.json",
     "lint": "eslint .",
     "test": "jest --coverage"
   },
-  "main": "dist/app.js",
+  "main": "dist/index.js",
   "dependencies": {
     "@rbsports/common": "file:.local/rbsports-common-1.0.0.tgz",
     "express": "^4.17.1",
@@ -23,6 +25,7 @@
     "eslint": "^7.19.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "http-terminator": "^3.0.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "ts-jest": "^26.5.1",
