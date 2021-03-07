@@ -1,0 +1,41 @@
+{
+  "name": "test",
+  "bracket": {
+    "regional": {
+      "region1Favorite": 3,
+      "region1Sleeper": 4,
+      "region1Cinderella": 15,
+      "region2Favorite": 17,
+      "region2Sleeper": 22,
+      "region2Cinderella": 31,
+      "region3Favorite": 33,
+      "region3Sleeper": 40,
+      "region3Cinderella": 48,
+      "region4Favorite": 49,
+      "region4Sleeper": 52,
+      "region4Cinderella": 62,
+      "bonusFavorite": 1,
+      "bonusSleeper": 5,
+      "bonusCinderella": 14
+    },
+    "sweetSixteen": {
+      "favorite": 3,
+      "sleeper": 7,
+      "cinderella": 16
+    },
+    "fastbreakTrio": {
+      "favorite": 1,
+      "sleeper": 20,
+      "cinderella": 59
+    },
+    "finalFour": {
+      "region1": 1,
+      "region2": 19,
+      "region3": 37,
+      "region4": 64
+    },
+    "tournamentChoice": 13,
+    "graveyard": 1,
+    "totalPointsScored": 150
+  }
+}
