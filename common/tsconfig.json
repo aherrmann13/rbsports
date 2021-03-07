@@ -7,6 +7,9 @@
     "baseUrl": "src",
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "declaration": true
+    "declaration": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
   }
 }
