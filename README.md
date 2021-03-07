@@ -104,3 +104,9 @@ plugin or extended from each other package.
 
 [fp-ts resource](https://rlee.dev/writing/practical-guide-to-fp-ts-part-1)  
 [fp-ts validation resource](https://dev.to/gcanti/getting-started-with-fp-ts-either-vs-validation-5eja)
+
+## debugging
+
+common issues running project with fixes 
+
+"Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock": [fix](https://www.digitalocean.com/community/questions/how-to-fix-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket)
