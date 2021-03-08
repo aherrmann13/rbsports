@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+docker run -it -v ${PWD}:/infrastructure rbsports/infrastructure
+
